@@ -15,11 +15,13 @@
 #import "SelectMultipleView.h"
 #import "AddressBookView.h"
 #import "FacebookFriendsView.h"
+#import "M13InfiniteTabBarController.h"
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 @interface RecentView : UITableViewController <UIActionSheetDelegate, SelectSingleDelegate, SelectMultipleDelegate, AddressBookDelegate, FacebookFriendsDelegate>
 //-------------------------------------------------------------------------------------------------------------------------------------------------
-
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *rightbar;
+@property (nonatomic, strong) M13InfiniteTabBarController *infiniteTabBarController;
 - (void)loadRecents;
 
 @end

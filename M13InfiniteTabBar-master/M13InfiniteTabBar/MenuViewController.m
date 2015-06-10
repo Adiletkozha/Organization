@@ -10,7 +10,8 @@
 #import "ViewController.h"
 #import "UIViewController+M13InfiniteTabBarExtension.h"
 #import "PulsingRequiresAttentionView.h"
-
+#import "RecentView.h"
+#import "NavigationController.h"
 @interface MenuViewController ()
 
 @end
@@ -131,6 +132,11 @@
     UIStoryboard *storyboard = self.storyboard;
     
     ViewController *vc1 = [storyboard instantiateViewControllerWithIdentifier:@"BookmarksVC"];
+    
+    RecentView *vcc = [[RecentView alloc] init];
+    NavigationController *nav1=[[NavigationController alloc]initWithRootViewController:vcc];
+    
+    
     ViewController *vc2 = [storyboard instantiateViewControllerWithIdentifier:@"SearchVC"];
     ViewController *vc3 = [storyboard instantiateViewControllerWithIdentifier:@"WorldVC"];
     ViewController *vc4 = [storyboard instantiateViewControllerWithIdentifier:@"StopwatchVC"];
@@ -158,9 +164,16 @@
 //    
     vc1.infiniteTabBarController = tabBarController;
     
+ 
+    
+    
     //------- end test ----------------------
     
     //You probably want to set this on the UIViewController initalization, from within the UIViewController subclass. I'm just doing it here since each tab inherits from the same subclass.
+  
+      [nav1 setInfiniteTabBarItem:[[M13InfiniteTabBarItem alloc] initWithTitle:@"Bookmarkss" selectedIconMask:[UIImage imageNamed:@"tab1Solid.png"] unselectedIconMask:[UIImage imageNamed:@"tab1Line.png"]]];
+    
+    
     [vc1 setInfiniteTabBarItem:[[M13InfiniteTabBarItem alloc] initWithTitle:@"Bookmarks" selectedIconMask:[UIImage imageNamed:@"tab1Solid.png"] unselectedIconMask:[UIImage imageNamed:@"tab1Line.png"]]];
     [vc2 setInfiniteTabBarItem:[[M13InfiniteTabBarItem alloc] initWithTitle:@"Search" selectedIconMask:[UIImage imageNamed:@"tab2Solid.png"] unselectedIconMask:[UIImage imageNamed:@"tab2Line.png"]]];
     [vc3 setInfiniteTabBarItem:[[M13InfiniteTabBarItem alloc] initWithTitle:@"World" selectedIconMask:[UIImage imageNamed:@"tab3Solid.png"] unselectedIconMask:[UIImage imageNamed:@"tab3Line.png"]]];
@@ -173,7 +186,7 @@
     if ([display isEqualToString:@"LessThan5Tabs"]) {
         return @[vc1, vc2, vc3];
     } else if ([display isEqualToString:@"GreaterThan5Tabs"] || [display isEqualToString:@"InfiniteDisabledSegue"]) {
-        return @[vc1, vc2, vc3, vc4, vc5, vc6, nc7];
+        return @[vc1, vc2, vc3, vc4, vc5, vc6, nc7,nav1];
     }
     return nil;
 }

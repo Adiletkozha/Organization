@@ -53,8 +53,11 @@
 - (void)viewDidLoad
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
+
 	[super viewDidLoad];
 	self.title = @"Recent";
+    
+    
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self
 																						   action:@selector(actionCompose)];
@@ -162,7 +165,8 @@
 			SelectSingleView *selectSingleView = [[SelectSingleView alloc] init];
 			selectSingleView.delegate = self;
 			NavigationController *navController = [[NavigationController alloc] initWithRootViewController:selectSingleView];
-			[self presentViewController:navController animated:YES completion:nil];
+			[self.view.window.rootViewController presentViewController:navController animated:YES completion:nil];
+        
 		}
 		if (buttonIndex == 1)
 		{
@@ -196,6 +200,7 @@
 {
 	PFUser *user1 = [PFUser currentUser];
 	NSString *groupId = StartPrivateChat(user1, user2);
+    NSLog(@"%@",groupId);
 	[self actionChat:groupId];
 }
 

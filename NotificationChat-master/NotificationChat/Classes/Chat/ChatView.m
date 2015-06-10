@@ -91,6 +91,7 @@
 - (void)viewDidAppear:(BOOL)animated
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
+    NSLog(@"View did appear");
 	[super viewDidAppear:animated];
 	self.collectionView.collectionViewLayout.springinessEnabled = YES;
 	timer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(loadMessages) userInfo:nil repeats:YES];
@@ -126,6 +127,8 @@
 		{
 			if (error == nil)
 			{
+               
+                
 				BOOL incoming = NO;
 				self.automaticallyScrollsToMostRecentMessage = NO;
 				for (PFObject *object in [objects reverseObjectEnumerator])
@@ -135,6 +138,7 @@
 				}
 				if ([objects count] != 0)
 				{
+                     NSLog(@"ch1");
 					if (initialized && incoming)
 						[JSQSystemSoundPlayer jsq_playMessageReceivedSound];
 					[self finishReceivingMessage];

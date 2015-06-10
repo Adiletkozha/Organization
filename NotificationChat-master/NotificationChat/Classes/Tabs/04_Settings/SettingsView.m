@@ -92,10 +92,8 @@
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
 	PFUser *user = [PFUser currentUser];
-
 	[imageUser setFile:user[PF_USER_PICTURE]];
 	[imageUser loadInBackground];
-
 	labelName.text = user[PF_USER_FULLNAME];
 }
 

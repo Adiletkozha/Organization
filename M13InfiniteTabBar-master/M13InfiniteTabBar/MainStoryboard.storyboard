@@ -111,15 +111,33 @@
                 <viewController storyboardIdentifier="BookmarksVC" title="Bookmarks" id="DI3-gX-rzn" customClass="SettingsView" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Zh-T4-Ylt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="505" y="540"/>
+            <point key="canvasLocation" x="-121" y="540"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LYm-xU-98M">
+            <objects>
+                <navigationController id="tyE-Nk-0Oh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sfY-QF-R2g">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="3Oq-C2-Ggf" kind="relationship" relationship="rootViewController" id="KPB-Mn-bs8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NpP-pd-Upp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="387" y="553"/>
         </scene>
         <!--Search-->
         <scene sceneID="AtM-hF-82s">
             <objects>
-                <viewController storyboardIdentifier="SearchVC" title="Search" id="3Oq-C2-Ggf" customClass="RecentView" sceneMemberID="viewController"/>
+                <viewController storyboardIdentifier="SearchVC" title="Search" id="3Oq-C2-Ggf" customClass="RecentView" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="vP3-IZ-TPM"/>
+                </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m2r-61-gAp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="851" y="540"/>
+            <point key="canvasLocation" x="846" y="540"/>
         </scene>
         <!--World-->
         <scene sceneID="xjN-U9-E3g">
@@ -142,24 +160,18 @@
             <objects>
                 <viewController storyboardIdentifier="CloudVC" title="Cloud" id="lRf-nX-8Pf" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="TVY-Bw-lPO"/>
-                        <viewControllerLayoutGuide type="bottom" id="ecz-Xj-QlB"/>
+                        <viewControllerLayoutGuide type="top" id="3be-CL-ftv"/>
+                        <viewControllerLayoutGuide type="bottom" id="zed-ip-ucw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JnQ-XF-lia">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab6Icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Q9c-Vc-JDf">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tab6Icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Q9c-Vc-JDf">
                                 <rect key="frame" x="20" y="20" width="280" height="528"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.7803921568627451" green="0.2627450980392157" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Q9c-Vc-JDf" secondAttribute="trailing" constant="20" symbolic="YES" id="9yd-9r-b2j"/>
-                            <constraint firstItem="Q9c-Vc-JDf" firstAttribute="top" secondItem="JnQ-XF-lia" secondAttribute="top" constant="20" symbolic="YES" id="OHr-6S-Lce"/>
-                            <constraint firstItem="Q9c-Vc-JDf" firstAttribute="leading" secondItem="JnQ-XF-lia" secondAttribute="leading" constant="20" symbolic="YES" id="RFT-h3-ezA"/>
-                            <constraint firstAttribute="bottom" secondItem="Q9c-Vc-JDf" secondAttribute="bottom" constant="20" symbolic="YES" id="VHw-uP-Ptw"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="Q9c-Vc-JDf" id="vSn-Zd-4Rq"/>
@@ -189,8 +201,8 @@
             <objects>
                 <viewController storyboardIdentifier="RootVC" title="Root" id="bTq-SM-UcR" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="vsS-kY-Fnb"/>
-                        <viewControllerLayoutGuide type="bottom" id="hC7-fp-Qnq"/>
+                        <viewControllerLayoutGuide type="top" id="TPa-xV-VNd"/>
+                        <viewControllerLayoutGuide type="bottom" id="JfM-U4-vgc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="EYC-QU-gZE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -216,8 +228,8 @@
             <objects>
                 <viewController storyboardIdentifier="InfoVC" title="Info" id="CkG-o5-kHg" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="lDn-I6-g2n"/>
-                        <viewControllerLayoutGuide type="bottom" id="6WL-ms-MZO"/>
+                        <viewControllerLayoutGuide type="top" id="cXn-mN-E5Q"/>
+                        <viewControllerLayoutGuide type="bottom" id="UNd-p4-x7H"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ub3-kW-XeV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -234,24 +246,18 @@
             <objects>
                 <viewController storyboardIdentifier="TrashVC" title="Trash" id="gl8-P4-wXu" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3eK-Gh-yuY"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZDD-Os-s3R"/>
+                        <viewControllerLayoutGuide type="top" id="Eva-k2-9s6"/>
+                        <viewControllerLayoutGuide type="bottom" id="DwM-JR-zsG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2Ad-wy-5qp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="A12C4B8C-993B-486F-A0C4-5CDA009246F8" translatesAutoresizingMaskIntoConstraints="NO" id="xfB-Mm-ggC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="A21011B1-14E4-4917-8EAF-CC2830F39A5F" translatesAutoresizingMaskIntoConstraints="NO" id="xfB-Mm-ggC">
                                 <rect key="frame" x="20" y="20" width="280" height="528"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.36862745099999999" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="xfB-Mm-ggC" secondAttribute="trailing" constant="20" symbolic="YES" id="NgJ-yC-9CC"/>
-                            <constraint firstItem="xfB-Mm-ggC" firstAttribute="top" secondItem="2Ad-wy-5qp" secondAttribute="top" constant="20" symbolic="YES" id="cmF-mL-4dn"/>
-                            <constraint firstAttribute="bottom" secondItem="xfB-Mm-ggC" secondAttribute="bottom" constant="20" symbolic="YES" id="egz-xh-A6h"/>
-                            <constraint firstItem="xfB-Mm-ggC" firstAttribute="leading" secondItem="2Ad-wy-5qp" secondAttribute="leading" constant="20" symbolic="YES" id="fsW-EO-2qD"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="xfB-Mm-ggC" id="VGs-vG-6Gu"/>
@@ -266,8 +272,8 @@
             <objects>
                 <viewController storyboardIdentifier="LessThanFiveTabBarController" id="wad-hy-p7K" customClass="M13InfiniteTabBarController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="J5h-ft-n0a"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZBo-LK-1TZ"/>
+                        <viewControllerLayoutGuide type="top" id="8sY-Oc-4Pm"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mho-ce-KTt"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xm3-Pm-UXe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -297,7 +303,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="A12C4B8C-993B-486F-A0C4-5CDA009246F8" width="250" height="250">
+        <image name="A21011B1-14E4-4917-8EAF-CC2830F39A5F" width="250" height="250">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
