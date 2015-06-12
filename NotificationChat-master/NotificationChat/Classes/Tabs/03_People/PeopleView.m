@@ -175,14 +175,14 @@
 			SelectSingleView *selectSingleView = [[SelectSingleView alloc] init];
 			selectSingleView.delegate = self;
 			NavigationController *navController = [[NavigationController alloc] initWithRootViewController:selectSingleView];
-			[self presentViewController:navController animated:YES completion:nil];
+			[self.view.window.rootViewController presentViewController:navController animated:YES completion:nil];
 		}
 		if (buttonIndex == 1)
 		{
 			SelectMultipleView *selectMultipleView = [[SelectMultipleView alloc] init];
 			selectMultipleView.delegate = self;
 			NavigationController *navController = [[NavigationController alloc] initWithRootViewController:selectMultipleView];
-			[self presentViewController:navController animated:YES completion:nil];
+			[self.view.window.rootViewController presentViewController:navController animated:YES completion:nil];
 		}
 		if (buttonIndex == 2)
 		{

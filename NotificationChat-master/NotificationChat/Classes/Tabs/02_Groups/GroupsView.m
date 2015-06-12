@@ -108,7 +108,7 @@
 {
 	CreateGroupView *createGroupView = [[CreateGroupView alloc] init];
 	NavigationController *navController = [[NavigationController alloc] initWithRootViewController:createGroupView];
-	[self presentViewController:navController animated:YES completion:nil];
+	[self.view.window.rootViewController presentViewController:navController animated:YES completion:nil];
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------

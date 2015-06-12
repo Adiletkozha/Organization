@@ -506,11 +506,13 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
+    NSLog(@"Delegate");
 	NSURL *video = info[UIImagePickerControllerMediaURL];
 	UIImage *picture = info[UIImagePickerControllerEditedImage];
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	[self sendMessage:nil Video:video Picture:picture];
 	//---------------------------------------------------------------------------------------------------------------------------------------------
+
 	[picker dismissViewControllerAnimated:YES completion:nil];
 }
 

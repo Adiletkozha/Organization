@@ -11,6 +11,9 @@
 #import "UIViewController+M13InfiniteTabBarExtension.h"
 #import "PulsingRequiresAttentionView.h"
 #import "RecentView.h"
+#import "SettingsView.h"
+#import "PeopleView.h"
+#import "GroupsView.h"
 #import "NavigationController.h"
 @interface MenuViewController ()
 
@@ -135,8 +138,12 @@
     
     RecentView *vcc = [[RecentView alloc] init];
     NavigationController *nav1=[[NavigationController alloc]initWithRootViewController:vcc];
-    
-    
+    GroupsView *groupView=[[GroupsView alloc]init];
+    NavigationController *nav2=[[NavigationController alloc]initWithRootViewController:groupView];
+    PeopleView *peopleView=[[PeopleView alloc]init];
+    NavigationController *nav3=[[NavigationController alloc]initWithRootViewController:peopleView];
+    SettingsView *settingsView=[[SettingsView alloc]init];
+    NavigationController *nav4=[[NavigationController alloc] initWithRootViewController:settingsView];
     ViewController *vc2 = [storyboard instantiateViewControllerWithIdentifier:@"SearchVC"];
     ViewController *vc3 = [storyboard instantiateViewControllerWithIdentifier:@"WorldVC"];
     ViewController *vc4 = [storyboard instantiateViewControllerWithIdentifier:@"StopwatchVC"];
@@ -171,8 +178,10 @@
     
     //You probably want to set this on the UIViewController initalization, from within the UIViewController subclass. I'm just doing it here since each tab inherits from the same subclass.
   
-      [nav1 setInfiniteTabBarItem:[[M13InfiniteTabBarItem alloc] initWithTitle:@"Bookmarkss" selectedIconMask:[UIImage imageNamed:@"tab1Solid.png"] unselectedIconMask:[UIImage imageNamed:@"tab1Line.png"]]];
-    
+      [nav1 setInfiniteTabBarItem:[[M13InfiniteTabBarItem alloc] initWithTitle:@"Недавние" selectedIconMask:[UIImage imageNamed:@"tab1Solid.png"] unselectedIconMask:[UIImage imageNamed:@"tab1Line.png"]]];
+      [nav2 setInfiniteTabBarItem:[[M13InfiniteTabBarItem alloc] initWithTitle:@"Группы" selectedIconMask:[UIImage imageNamed:@"tab2Solid.png"] unselectedIconMask:[UIImage imageNamed:@"tab2Line.png"]]];
+      [nav3 setInfiniteTabBarItem:[[M13InfiniteTabBarItem alloc] initWithTitle:@"Сотрудники" selectedIconMask:[UIImage imageNamed:@"tab3Solid.png"] unselectedIconMask:[UIImage imageNamed:@"tab3Line.png"]]];
+      [nav4 setInfiniteTabBarItem:[[M13InfiniteTabBarItem alloc] initWithTitle:@"Настройки" selectedIconMask:[UIImage imageNamed:@"tab4Solid.png"] unselectedIconMask:[UIImage imageNamed:@"tab3Line.png"]]];
     
     [vc1 setInfiniteTabBarItem:[[M13InfiniteTabBarItem alloc] initWithTitle:@"Bookmarks" selectedIconMask:[UIImage imageNamed:@"tab1Solid.png"] unselectedIconMask:[UIImage imageNamed:@"tab1Line.png"]]];
     [vc2 setInfiniteTabBarItem:[[M13InfiniteTabBarItem alloc] initWithTitle:@"Search" selectedIconMask:[UIImage imageNamed:@"tab2Solid.png"] unselectedIconMask:[UIImage imageNamed:@"tab2Line.png"]]];
@@ -186,7 +195,7 @@
     if ([display isEqualToString:@"LessThan5Tabs"]) {
         return @[vc1, vc2, vc3];
     } else if ([display isEqualToString:@"GreaterThan5Tabs"] || [display isEqualToString:@"InfiniteDisabledSegue"]) {
-        return @[vc1, vc2, vc3, vc4, vc5, vc6, nc7,nav1];
+        return @[nav1, nav2, nav3, nav4, vc5, vc6, nc7,vc3];
     }
     return nil;
 }
