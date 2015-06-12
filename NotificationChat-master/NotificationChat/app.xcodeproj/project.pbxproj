@@ -223,6 +223,7 @@
 		2EFF7BDA1B26F2E80071399E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF7BA41B26F2E80071399E /* ViewController.m */; };
 		2EFF7BDE1B26FA880071399E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EFF7BDD1B26FA880071399E /* FacebookSDK.framework */; };
 		2EFF7BE61B280A440071399E /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF7BE51B280A440071399E /* MainViewController.m */; };
+		2EFF7BE91B2AAE910071399E /* UITabBarController+HideTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF7BE81B2AAE910071399E /* UITabBarController+HideTabBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -562,6 +563,8 @@
 		2EFF7BDD1B26FA880071399E /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		2EFF7BE41B280A440071399E /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Classes/Application/MainViewController.h; sourceTree = SOURCE_ROOT; };
 		2EFF7BE51B280A440071399E /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Classes/Application/MainViewController.m; sourceTree = SOURCE_ROOT; };
+		2EFF7BE71B2AAE910071399E /* UITabBarController+HideTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+HideTabBar.h"; sourceTree = "<group>"; };
+		2EFF7BE81B2AAE910071399E /* UITabBarController+HideTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+HideTabBar.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1308,6 +1311,8 @@
 				2EFF7B561B26F1F50071399E /* M13InfiniteTabBarItem.m */,
 				2EFF7B571B26F1F50071399E /* M13InfiniteTabBarRequiresAttentionBackgroundView.h */,
 				2EFF7B581B26F1F50071399E /* M13InfiniteTabBarRequiresAttentionBackgroundView.m */,
+				2EFF7BE71B2AAE910071399E /* UITabBarController+HideTabBar.h */,
+				2EFF7BE81B2AAE910071399E /* UITabBarController+HideTabBar.m */,
 				2EFF7B5B1B26F1F50071399E /* RequiresUserAttentionBackgroundViews */,
 				2EFF7B5E1B26F1F50071399E /* UIViewController+M13InfiniteTabBarExtension.h */,
 				2EFF7B5F1B26F1F50071399E /* UIViewController+M13InfiniteTabBarExtension.m */,
@@ -1577,6 +1582,7 @@
 				291A2C6E1B08EEC100E0E68C /* RecentView.m in Sources */,
 				291A2B961B08ED2E00E0E68C /* UIWebView+AFNetworking.m in Sources */,
 				291A2BB81B08ED2E00E0E68C /* JSQMessagesCollectionViewCell.m in Sources */,
+				2EFF7BE91B2AAE910071399E /* UITabBarController+HideTabBar.m in Sources */,
 				291A2BCA1B08ED2E00E0E68C /* ProgressHUD.m in Sources */,
 				291A2C691B08EEC100E0E68C /* VideoMediaItem.m in Sources */,
 				291A2B871B08ED2E00E0E68C /* AFHTTPRequestOperationManager.m in Sources */,
