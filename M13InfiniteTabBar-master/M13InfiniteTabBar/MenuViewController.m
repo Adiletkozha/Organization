@@ -15,6 +15,8 @@
 #import "PeopleView.h"
 #import "GroupsView.h"
 #import "NavigationController.h"
+#import "TasksView.h"
+#import "MeetingsTableViewController.h"
 @interface MenuViewController ()
 
 @end
@@ -35,12 +37,18 @@
 
 - (void)viewDidLoad
 {
+    
     [super viewDidLoad];
+    [self someMethod];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -86,7 +94,9 @@
     return [super tableView:tableView cellForRowAtIndexPath:indexPath];
 }
 
-
+- (void)someMethod {
+    [self performSegueWithIdentifier:@"GreaterThan5TabsSegue" sender:self];
+}
 
 #pragma mark - Navigation
 
@@ -94,6 +104,9 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     [self.navigationController setNavigationBarHidden:YES animated:YES];
+
+    
+    
     if ([segue.identifier isEqualToString:@"LessThan5TabsSegue"]) {
         display = @"LessThan5Tabs";
         M13InfiniteTabBarController *vc = segue.destinationViewController;
@@ -107,7 +120,7 @@
      
         vc.requiresAttentionBackgroundView = [[PulsingRequiresAttentionView alloc] init];
         //A view controller requires user attention
-        [vc viewControllerAtIndex:6 requiresUserAttentionWithImportanceLevel:1];
+        [vc viewControllerAtIndex:3 requiresUserAttentionWithImportanceLevel:1];
     } else if ([segue.identifier isEqualToString:@"InfiniteDisabledSegue"]) {
         M13InfiniteTabBarController *vc = segue.destinationViewController;
         display = @"InfiniteDisabledSegue";
@@ -135,10 +148,7 @@
 - (NSArray *)infiniteTabBarControllerRequestingViewControllersToDisplay:(M13InfiniteTabBarController *)tabBarController
 {
     //Load the view controllers from the storyboard and add them to the array.
-    UIStoryboard *storyboard = self.storyboard;
-    
-    ViewController *vc1 = [storyboard instantiateViewControllerWithIdentifier:@"BookmarksVC"];
-    
+ 
     RecentView *vcc = [[RecentView alloc] init];
     UINavigationController *nav1=[[UINavigationController alloc]initWithRootViewController:vcc];
     nav1.delegate=tabBarController;
@@ -152,15 +162,13 @@
     SettingsView *settingsView=[[SettingsView alloc]init];
     UINavigationController *nav4=[[UINavigationController alloc] initWithRootViewController:settingsView];
      nav4.delegate=tabBarController;
-    ViewController *vc2 = [storyboard instantiateViewControllerWithIdentifier:@"SearchVC"];
-    ViewController *vc3 = [storyboard instantiateViewControllerWithIdentifier:@"WorldVC"];
-    ViewController *vc4 = [storyboard instantiateViewControllerWithIdentifier:@"StopwatchVC"];
-    ViewController *vc5 = [storyboard instantiateViewControllerWithIdentifier:@"TrashVC"];
-    ViewController *vc6 = [storyboard instantiateViewControllerWithIdentifier:@"CloudVC"];
-    UINavigationController *nc7 = [storyboard instantiateViewControllerWithIdentifier:@"NavigationVC"];
-    ViewController *vc7 = [storyboard instantiateViewControllerWithIdentifier:@"InfoVC"];
-    [nc7 pushViewController:vc7 animated:NO];
+    TasksView *tasksView=[[TasksView alloc]init];
+    UINavigationController *nav5=[[UINavigationController alloc]initWithRootViewController:tasksView];
+    //nav5.delegate=tabBarController;
+    MeetingsTableViewController *meetingsView=[[MeetingsTableViewController alloc]init];
+    UINavigationController *nav6=[[UINavigationController alloc]initWithRootViewController:meetingsView];
     
+
     //------- setSelectedIndex: test --------
 //    
 //    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -177,7 +185,7 @@
 //    [button1 addTarget:vc1 action:@selector(gotoTrash:) forControlEvents:UIControlEventTouchUpInside];
 //    [vc1.view addSubview:button1];
 //    
-    vc1.infiniteTabBarController = tabBarController;
+  
     vcc.infiniteTabBarController=tabBarController;
     
  
@@ -192,19 +200,16 @@
       [nav3 setInfiniteTabBarItem:[[M13InfiniteTabBarItem alloc] initWithTitle:@"Сотрудники" selectedIconMask:[UIImage imageNamed:@"tab3Solid.png"] unselectedIconMask:[UIImage imageNamed:@"tab3Line.png"]]];
       [nav4 setInfiniteTabBarItem:[[M13InfiniteTabBarItem alloc] initWithTitle:@"Настройки" selectedIconMask:[UIImage imageNamed:@"tab4Solid.png"] unselectedIconMask:[UIImage imageNamed:@"tab3Line.png"]]];
     
-    [vc1 setInfiniteTabBarItem:[[M13InfiniteTabBarItem alloc] initWithTitle:@"Bookmarks" selectedIconMask:[UIImage imageNamed:@"tab1Solid.png"] unselectedIconMask:[UIImage imageNamed:@"tab1Line.png"]]];
-    [vc2 setInfiniteTabBarItem:[[M13InfiniteTabBarItem alloc] initWithTitle:@"Search" selectedIconMask:[UIImage imageNamed:@"tab2Solid.png"] unselectedIconMask:[UIImage imageNamed:@"tab2Line.png"]]];
-    [vc3 setInfiniteTabBarItem:[[M13InfiniteTabBarItem alloc] initWithTitle:@"World" selectedIconMask:[UIImage imageNamed:@"tab3Solid.png"] unselectedIconMask:[UIImage imageNamed:@"tab3Line.png"]]];
-    [vc4 setInfiniteTabBarItem:[[M13InfiniteTabBarItem alloc] initWithTitle:@"Stopwatch" selectedIconMask:[UIImage imageNamed:@"tab4Solid.png"] unselectedIconMask:[UIImage imageNamed:@"tab4Line.png"]]];
-    [vc5 setInfiniteTabBarItem:[[M13InfiniteTabBarItem alloc] initWithTitle:@"Trash" selectedIconMask:[UIImage imageNamed:@"tab5Solid.png"] unselectedIconMask:[UIImage imageNamed:@"tab5Line.png"]]];
-    [vc6 setInfiniteTabBarItem:[[M13InfiniteTabBarItem alloc] initWithTitle:@"Cloud" selectedIconMask:[UIImage imageNamed:@"tab6Solid.png"] unselectedIconMask:[UIImage imageNamed:@"tab6Line.png"]]];
-    [nc7 setInfiniteTabBarItem:[[M13InfiniteTabBarItem alloc] initWithTitle:@"Info" selectedIconMask:[UIImage imageNamed:@"tab7Solid.png"] unselectedIconMask:[UIImage imageNamed:@"tab7Line.png"]]];
+      [nav5 setInfiniteTabBarItem:[[M13InfiniteTabBarItem alloc] initWithTitle:@"Задачи" selectedIconMask:[UIImage imageNamed:@"tab5Solid.png"] unselectedIconMask:[UIImage imageNamed:@"tab5Line.png"]]];
     
+      [nav6 setInfiniteTabBarItem:[[M13InfiniteTabBarItem alloc] initWithTitle:@"Собрания" selectedIconMask:[UIImage imageNamed:@"tab6Solid.png"] unselectedIconMask:[UIImage imageNamed:@"tab6Line.png"]]];
+    
+
     //Done
     if ([display isEqualToString:@"LessThan5Tabs"]) {
-        return @[vc1, vc2, vc3];
+        return @[nav1, nav2, nav3];
     } else if ([display isEqualToString:@"GreaterThan5Tabs"] || [display isEqualToString:@"InfiniteDisabledSegue"]) {
-        return @[nav1, nav2, nav3, nav4, vc5, vc6, nc7,vc3];
+        return @[nav1, nav2, nav3, nav4, nav5, nav6];
     }
     return nil;
 }

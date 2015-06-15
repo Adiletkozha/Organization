@@ -79,6 +79,25 @@
 #define		PF_REPORT_CLASS_NAME				@"Report"				//	Class name
 #define		PF_REPORT_USER1						@"user1"				//	Pointer to User Class
 #define		PF_REPORT_USER2						@"user2"				//	Pointer to User Class
+
+//------------------------------------------------------------------
+#define		PF_MEETINGS_CLASS_NAME				@"meetings"				//	Class name
+#define		PF_MEETINGS_USER					@"user"					//	Pointer to User Class
+#define		PF_MEETINGS_OBJECTID				@"objectId"				//	String
+#define		PF_MEETINGS_WORKERS                 @"workers"              //	Array
+#define		PF_MEETINGS_MSG_MEETING             @"msg_meeting"          //	String
+
+
+//-----------------------------------------------------------------------
+#define		PF_TASK_CLASS_NAME				@"Task"                 //	Class name
+#define		PF_TASK_USER					@"user"					//	Pointer to User Class
+#define		PF_TASK_OBJECTID				@"objectId"				//	String
+#define		PF_TASK_WORKERS                 @"workers"              //	Array
+#define		PF_TASK_NAME                    @"name"                 //	String
+#define		PF_TASK_DESCRIPTION             @"description"          //	String
+
+
+
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 #define		NOTIFICATION_APP_STARTED			@"NCAppStarted"
 #define		NOTIFICATION_USER_LOGGED_IN			@"NCUserLoggedIn"

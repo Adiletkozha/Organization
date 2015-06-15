@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateTaskView">
+            <connections>
+                <outlet property="datePicker" destination="Sbm-Xu-B1c" id="dLl-YB-kFY"/>
+                <outlet property="fieldName" destination="bRI-Lv-MtU" id="yuL-LF-Ler"/>
+                <outlet property="taskDescription" destination="dHV-eK-3wG" id="ZY9-HD-6fz"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewHeader" destination="6Hs-iU-fQc" id="Hft-Wy-nb8"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bouncesZoom="NO" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <connections>
+                <outlet property="dataSource" destination="-1" id="Tng-2m-Rnh"/>
+                <outlet property="delegate" destination="-1" id="9aC-8N-iBw"/>
+            </connections>
+            <point key="canvasLocation" x="603" y="382"/>
+        </tableView>
+        <view contentMode="scaleToFill" id="6Hs-iU-fQc">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="302"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xzg-0x-8O2">
+                    <rect key="frame" x="0.0" y="10" width="320" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Task name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bRI-Lv-MtU">
+                    <rect key="frame" x="8" y="10" width="297" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="eWL-hD-uDP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="Task Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dHV-eK-3wG">
+                    <rect key="frame" x="8" y="71" width="304" height="92"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Sbm-Xu-B1c">
+                    <rect key="frame" x="0.0" y="140" width="320" height="162"/>
+                    <date key="date" timeIntervalSinceReferenceDate="456060479.00543702">
+                        <!--2015-06-15 11:27:59 +0000-->
+                    </date>
+                </datePicker>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Deadline" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z56-lt-oBe">
+                    <rect key="frame" x="139" y="111" width="100" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="bRI-Lv-MtU" firstAttribute="top" secondItem="Xzg-0x-8O2" secondAttribute="top" id="5Tc-WC-oWE"/>
+                <constraint firstItem="Xzg-0x-8O2" firstAttribute="leading" secondItem="6Hs-iU-fQc" secondAttribute="leading" id="Fn4-wC-2L7"/>
+                <constraint firstItem="dHV-eK-3wG" firstAttribute="centerX" secondItem="Xzg-0x-8O2" secondAttribute="centerX" id="Gb2-xd-Wy6"/>
+                <constraint firstAttribute="trailing" secondItem="bRI-Lv-MtU" secondAttribute="trailing" constant="15" id="Klw-Xo-yum"/>
+                <constraint firstItem="bRI-Lv-MtU" firstAttribute="leading" secondItem="dHV-eK-3wG" secondAttribute="leading" id="MbH-Nb-er8"/>
+                <constraint firstAttribute="trailing" secondItem="Xzg-0x-8O2" secondAttribute="trailing" id="OD7-nJ-hMq"/>
+                <constraint firstItem="bRI-Lv-MtU" firstAttribute="top" secondItem="6Hs-iU-fQc" secondAttribute="top" constant="10" id="W4h-5i-6vb"/>
+                <constraint firstItem="bRI-Lv-MtU" firstAttribute="leading" secondItem="6Hs-iU-fQc" secondAttribute="leadingMargin" id="gxj-U4-yLY"/>
+                <constraint firstItem="dHV-eK-3wG" firstAttribute="top" secondItem="bRI-Lv-MtU" secondAttribute="bottom" constant="11" id="j5g-R3-2YR"/>
+                <constraint firstItem="dHV-eK-3wG" firstAttribute="bottom" secondItem="6Hs-iU-fQc" secondAttribute="bottomMargin" id="nkt-Iu-XeF"/>
+                <constraint firstItem="Xzg-0x-8O2" firstAttribute="bottom" secondItem="bRI-Lv-MtU" secondAttribute="bottom" id="oNZ-Sj-NCg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="238" y="484"/>
+        </view>
+    </objects>
+</document>

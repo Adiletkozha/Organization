@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateMeetingsView">
+            <connections>
+                <outlet property="datePicker" destination="yyE-0X-Be5" id="8TK-uu-aXr"/>
+                <outlet property="fieldName" destination="bRI-Lv-MtU" id="yuL-LF-Ler"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewHeader" destination="6Hs-iU-fQc" id="Hft-Wy-nb8"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bouncesZoom="NO" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <connections>
+                <outlet property="dataSource" destination="-1" id="Tng-2m-Rnh"/>
+                <outlet property="delegate" destination="-1" id="9aC-8N-iBw"/>
+            </connections>
+            <point key="canvasLocation" x="610" y="368"/>
+        </tableView>
+        <view contentMode="scaleToFill" id="6Hs-iU-fQc">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="222"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xzg-0x-8O2">
+                    <rect key="frame" x="0.0" y="10" width="320" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Meeting description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bRI-Lv-MtU">
+                    <rect key="frame" x="15" y="10" width="290" height="50"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
+                </textField>
+                <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="yyE-0X-Be5">
+                    <rect key="frame" x="0.0" y="60" width="320" height="162"/>
+                    <date key="date" timeIntervalSinceReferenceDate="456061912.61637598">
+                        <!--2015-06-15 11:51:52 +0000-->
+                    </date>
+                </datePicker>
+            </subviews>
+            <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="Xzg-0x-8O2" firstAttribute="leading" secondItem="6Hs-iU-fQc" secondAttribute="leading" id="7qW-KO-rjv"/>
+                <constraint firstItem="Xzg-0x-8O2" firstAttribute="top" secondItem="6Hs-iU-fQc" secondAttribute="top" constant="10" id="RNz-Xi-Duh"/>
+                <constraint firstItem="Xzg-0x-8O2" firstAttribute="centerY" secondItem="6Hs-iU-fQc" secondAttribute="centerY" id="S2V-AP-O6J"/>
+                <constraint firstAttribute="trailing" secondItem="Xzg-0x-8O2" secondAttribute="trailing" id="z1x-de-edV"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="232" y="339"/>
+        </view>
+    </objects>
+</document>

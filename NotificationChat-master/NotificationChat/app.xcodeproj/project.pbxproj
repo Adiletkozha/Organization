@@ -163,6 +163,18 @@
 		29A2996E1A55763100117608 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A2996D1A55763100117608 /* Social.framework */; };
 		29EB240B19E9292500D7AA97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29EB240A19E9292500D7AA97 /* main.m */; };
 		29EB240E19E9292500D7AA97 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 29EB240D19E9292500D7AA97 /* AppDelegate.m */; };
+		2E2A8C1F1B2EE9EF0043E1CD /* CreateTaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A8C0D1B2EE9EF0043E1CD /* CreateTaskView.m */; };
+		2E2A8C201B2EE9EF0043E1CD /* CreateTaskView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E2A8C0E1B2EE9EF0043E1CD /* CreateTaskView.xib */; };
+		2E2A8C211B2EE9EF0043E1CD /* TaskSettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A8C101B2EE9EF0043E1CD /* TaskSettingsView.m */; };
+		2E2A8C221B2EE9EF0043E1CD /* TaskSettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E2A8C111B2EE9EF0043E1CD /* TaskSettingsView.xib */; };
+		2E2A8C231B2EE9EF0043E1CD /* TasksView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A8C131B2EE9EF0043E1CD /* TasksView.m */; };
+		2E2A8C241B2EE9EF0043E1CD /* TasksView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E2A8C141B2EE9EF0043E1CD /* TasksView.xib */; };
+		2E2A8C251B2EE9EF0043E1CD /* CreateMeetingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A8C171B2EE9EF0043E1CD /* CreateMeetingsView.m */; };
+		2E2A8C261B2EE9EF0043E1CD /* CreateMeetingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E2A8C181B2EE9EF0043E1CD /* CreateMeetingsView.xib */; };
+		2E2A8C271B2EE9EF0043E1CD /* MeetingsSettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A8C1A1B2EE9EF0043E1CD /* MeetingsSettingsView.m */; };
+		2E2A8C281B2EE9EF0043E1CD /* MeetingsSettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E2A8C1B1B2EE9EF0043E1CD /* MeetingsSettingsView.xib */; };
+		2E2A8C291B2EE9EF0043E1CD /* MeetingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A8C1D1B2EE9EF0043E1CD /* MeetingsTableViewController.m */; };
+		2E2A8C2A1B2EE9EF0043E1CD /* MeetingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E2A8C1E1B2EE9EF0043E1CD /* MeetingsView.xib */; };
 		2EFF7B601B26F1F50071399E /* M13InfiniteTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF7B521B26F1F50071399E /* M13InfiniteTabBar.m */; };
 		2EFF7B611B26F1F50071399E /* M13InfiniteTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF7B541B26F1F50071399E /* M13InfiniteTabBarController.m */; };
 		2EFF7B621B26F1F50071399E /* M13InfiniteTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF7B561B26F1F50071399E /* M13InfiniteTabBarItem.m */; };
@@ -492,6 +504,24 @@
 		29EB240C19E9292500D7AA97 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		29EB240D19E9292500D7AA97 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		29EB254F19E92ACD00D7AA97 /* AppConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConstant.h; sourceTree = "<group>"; };
+		2E2A8C0C1B2EE9EF0043E1CD /* CreateTaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateTaskView.h; sourceTree = "<group>"; };
+		2E2A8C0D1B2EE9EF0043E1CD /* CreateTaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateTaskView.m; sourceTree = "<group>"; };
+		2E2A8C0E1B2EE9EF0043E1CD /* CreateTaskView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateTaskView.xib; sourceTree = "<group>"; };
+		2E2A8C0F1B2EE9EF0043E1CD /* TaskSettingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskSettingsView.h; sourceTree = "<group>"; };
+		2E2A8C101B2EE9EF0043E1CD /* TaskSettingsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskSettingsView.m; sourceTree = "<group>"; };
+		2E2A8C111B2EE9EF0043E1CD /* TaskSettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaskSettingsView.xib; sourceTree = "<group>"; };
+		2E2A8C121B2EE9EF0043E1CD /* TasksView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TasksView.h; sourceTree = "<group>"; };
+		2E2A8C131B2EE9EF0043E1CD /* TasksView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TasksView.m; sourceTree = "<group>"; };
+		2E2A8C141B2EE9EF0043E1CD /* TasksView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TasksView.xib; sourceTree = "<group>"; };
+		2E2A8C161B2EE9EF0043E1CD /* CreateMeetingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateMeetingsView.h; sourceTree = "<group>"; };
+		2E2A8C171B2EE9EF0043E1CD /* CreateMeetingsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateMeetingsView.m; sourceTree = "<group>"; };
+		2E2A8C181B2EE9EF0043E1CD /* CreateMeetingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateMeetingsView.xib; sourceTree = "<group>"; };
+		2E2A8C191B2EE9EF0043E1CD /* MeetingsSettingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetingsSettingsView.h; sourceTree = "<group>"; };
+		2E2A8C1A1B2EE9EF0043E1CD /* MeetingsSettingsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetingsSettingsView.m; sourceTree = "<group>"; };
+		2E2A8C1B1B2EE9EF0043E1CD /* MeetingsSettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeetingsSettingsView.xib; sourceTree = "<group>"; };
+		2E2A8C1C1B2EE9EF0043E1CD /* MeetingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetingsTableViewController.h; sourceTree = "<group>"; };
+		2E2A8C1D1B2EE9EF0043E1CD /* MeetingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetingsTableViewController.m; sourceTree = "<group>"; };
+		2E2A8C1E1B2EE9EF0043E1CD /* MeetingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeetingsView.xib; sourceTree = "<group>"; };
 		2EFF7B511B26F1F50071399E /* M13InfiniteTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M13InfiniteTabBar.h; sourceTree = "<group>"; };
 		2EFF7B521B26F1F50071399E /* M13InfiniteTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M13InfiniteTabBar.m; sourceTree = "<group>"; };
 		2EFF7B531B26F1F50071399E /* M13InfiniteTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M13InfiniteTabBarController.h; sourceTree = "<group>"; };
@@ -1022,6 +1052,8 @@
 				291A2C101B08EEC100E0E68C /* 02_Groups */,
 				291A2C1C1B08EEC100E0E68C /* 03_People */,
 				291A2C201B08EEC100E0E68C /* 04_Settings */,
+				2E2A8C0B1B2EE9EF0043E1CD /* 05_Tasks */,
+				2E2A8C151B2EE9EF0043E1CD /* 06_Meetings */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -1300,6 +1332,38 @@
 			path = Frameworks;
 			sourceTree = "<group>";
 		};
+		2E2A8C0B1B2EE9EF0043E1CD /* 05_Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				2E2A8C0C1B2EE9EF0043E1CD /* CreateTaskView.h */,
+				2E2A8C0D1B2EE9EF0043E1CD /* CreateTaskView.m */,
+				2E2A8C0E1B2EE9EF0043E1CD /* CreateTaskView.xib */,
+				2E2A8C0F1B2EE9EF0043E1CD /* TaskSettingsView.h */,
+				2E2A8C101B2EE9EF0043E1CD /* TaskSettingsView.m */,
+				2E2A8C111B2EE9EF0043E1CD /* TaskSettingsView.xib */,
+				2E2A8C121B2EE9EF0043E1CD /* TasksView.h */,
+				2E2A8C131B2EE9EF0043E1CD /* TasksView.m */,
+				2E2A8C141B2EE9EF0043E1CD /* TasksView.xib */,
+			);
+			path = 05_Tasks;
+			sourceTree = "<group>";
+		};
+		2E2A8C151B2EE9EF0043E1CD /* 06_Meetings */ = {
+			isa = PBXGroup;
+			children = (
+				2E2A8C161B2EE9EF0043E1CD /* CreateMeetingsView.h */,
+				2E2A8C171B2EE9EF0043E1CD /* CreateMeetingsView.m */,
+				2E2A8C181B2EE9EF0043E1CD /* CreateMeetingsView.xib */,
+				2E2A8C191B2EE9EF0043E1CD /* MeetingsSettingsView.h */,
+				2E2A8C1A1B2EE9EF0043E1CD /* MeetingsSettingsView.m */,
+				2E2A8C1B1B2EE9EF0043E1CD /* MeetingsSettingsView.xib */,
+				2E2A8C1C1B2EE9EF0043E1CD /* MeetingsTableViewController.h */,
+				2E2A8C1D1B2EE9EF0043E1CD /* MeetingsTableViewController.m */,
+				2E2A8C1E1B2EE9EF0043E1CD /* MeetingsView.xib */,
+			);
+			path = 06_Meetings;
+			sourceTree = "<group>";
+		};
 		2EFF7B501B26F1F50071399E /* Classes2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1481,6 +1545,7 @@
 				291A2C711B08EEC100E0E68C /* CreateGroupView.xib in Resources */,
 				2EFF7BCE1B26F2E80071399E /* tab6Solid@2x.png in Resources */,
 				291A2B9C1B08ED2E00E0E68C /* JSQMessagesAssets.bundle in Resources */,
+				2E2A8C201B2EE9EF0043E1CD /* CreateTaskView.xib in Resources */,
 				291A2BC41B08ED2E00E0E68C /* JSQMessagesToolbarContentView.xib in Resources */,
 				2EFF7BC21B26F2E80071399E /* tab4Solid@2x.png in Resources */,
 				2EFF7BBD1B26F2E80071399E /* tab4Icon.png in Resources */,
@@ -1493,8 +1558,10 @@
 				291A2BBC1B08ED2E00E0E68C /* JSQMessagesCollectionViewCellOutgoing.xib in Resources */,
 				291A2BEC1B08ED4800E0E68C /* settings_blank@2x.png in Resources */,
 				291A2BF11B08ED4800E0E68C /* tab_settings@2x.png in Resources */,
+				2E2A8C261B2EE9EF0043E1CD /* CreateMeetingsView.xib in Resources */,
 				2EFF7BD01B26F2E80071399E /* tab7Icon@2x.png in Resources */,
 				2EFF7BC41B26F2E80071399E /* tab5Icon@2x.png in Resources */,
+				2E2A8C221B2EE9EF0043E1CD /* TaskSettingsView.xib in Resources */,
 				291A2BC71B08ED2E00E0E68C /* Info.plist in Resources */,
 				291A2BC61B08ED2E00E0E68C /* JSQMessagesTypingIndicatorFooterView.xib in Resources */,
 				2EFF7BB61B26F2E80071399E /* tab2Solid@2x.png in Resources */,
@@ -1518,6 +1585,7 @@
 				2EFF7BC81B26F2E80071399E /* tab5Solid@2x.png in Resources */,
 				291A2C871B08EEC100E0E68C /* FacebookFriendsView.xib in Resources */,
 				2EFF7BB81B26F2E80071399E /* tab3Icon@2x.png in Resources */,
+				2E2A8C281B2EE9EF0043E1CD /* MeetingsSettingsView.xib in Resources */,
 				291A2C731B08EEC100E0E68C /* GroupSettingsView.xib in Resources */,
 				291A2C811B08EEC100E0E68C /* SelectSingleView.xib in Resources */,
 				2EFF7BD11B26F2E80071399E /* tab7Line.png in Resources */,
@@ -1537,6 +1605,7 @@
 				2EFF7BA71B26F2E80071399E /* Default-568h@2x.png in Resources */,
 				291A2BC11B08ED2E00E0E68C /* JSQMessagesLoadEarlierHeaderView.xib in Resources */,
 				291A2BED1B08ED4800E0E68C /* stickers_blank@2x.png in Resources */,
+				2E2A8C2A1B2EE9EF0043E1CD /* MeetingsView.xib in Resources */,
 				291A2C961B08EEC100E0E68C /* RegisterView.xib in Resources */,
 				2EFF7BCF1B26F2E80071399E /* tab7Icon.png in Resources */,
 				2EFF7BD81B26F2E80071399E /* MainStoryboard.storyboard in Resources */,
@@ -1567,6 +1636,7 @@
 				2EFF7BD31B26F2E80071399E /* tab7Solid.png in Resources */,
 				291A2BE91B08ED4800E0E68C /* chat_stickers@2x.png in Resources */,
 				2EFF7BAF1B26F2E80071399E /* tab1Solid.png in Resources */,
+				2E2A8C241B2EE9EF0043E1CD /* TasksView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1602,6 +1672,7 @@
 				291A2B861B08ED2E00E0E68C /* AFHTTPRequestOperation.m in Sources */,
 				2EFF7BA61B26F2E80071399E /* CustomNavigationController.m in Sources */,
 				291A2C671B08EEC100E0E68C /* ChatView.m in Sources */,
+				2E2A8C231B2EE9EF0043E1CD /* TasksView.m in Sources */,
 				291A2B8C1B08ED2E00E0E68C /* AFURLRequestSerialization.m in Sources */,
 				291A2C8A1B08EEC100E0E68C /* PFUser+Util.m in Sources */,
 				291A2C781B08EEC100E0E68C /* BlockedView.m in Sources */,
@@ -1650,20 +1721,25 @@
 				291A2C901B08EEC100E0E68C /* fileutil.m in Sources */,
 				291A2C861B08EEC100E0E68C /* FacebookFriendsView.m in Sources */,
 				291A2BAD1B08ED2E00E0E68C /* JSQMessagesCollectionViewFlowLayoutInvalidationContext.m in Sources */,
+				2E2A8C1F1B2EE9EF0043E1CD /* CreateTaskView.m in Sources */,
+				2E2A8C211B2EE9EF0043E1CD /* TaskSettingsView.m in Sources */,
 				291A2BBF1B08ED2E00E0E68C /* JSQMessagesLabel.m in Sources */,
 				291A2BA91B08ED2E00E0E68C /* JSQMessagesMediaViewBubbleImageMasker.m in Sources */,
 				291A2B8B1B08ED2E00E0E68C /* AFURLConnectionOperation.m in Sources */,
+				2E2A8C291B2EE9EF0043E1CD /* MeetingsTableViewController.m in Sources */,
 				291A2C741B08EEC100E0E68C /* GroupsView.m in Sources */,
 				291A2BAC1B08ED2E00E0E68C /* JSQMessagesCollectionViewFlowLayout.m in Sources */,
 				291A2BB11B08ED2E00E0E68C /* JSQMessage.m in Sources */,
 				291A2C761B08EEC100E0E68C /* PeopleView.m in Sources */,
 				291A2BA71B08ED2E00E0E68C /* JSQMessagesAvatarImageFactory.m in Sources */,
 				291A2BB31B08ED2E00E0E68C /* JSQMessagesBubbleImage.m in Sources */,
+				2E2A8C271B2EE9EF0043E1CD /* MeetingsSettingsView.m in Sources */,
 				291A2C881B08EEC100E0E68C /* group.m in Sources */,
 				291A2BA31B08ED2E00E0E68C /* UIView+JSQMessages.m in Sources */,
 				2EFF7B661B26F1F50071399E /* UIViewController+M13InfiniteTabBarExtension.m in Sources */,
 				29EB240B19E9292500D7AA97 /* main.m in Sources */,
 				291A2C651B08EEC100E0E68C /* ProfileView.m in Sources */,
+				2E2A8C251B2EE9EF0043E1CD /* CreateMeetingsView.m in Sources */,
 				291A2C7E1B08EEC100E0E68C /* SettingsView.m in Sources */,
 				291A2C971B08EEC100E0E68C /* WelcomeView.m in Sources */,
 				291A2B9D1B08ED2E00E0E68C /* JSQSystemSoundPlayer+JSQMessages.m in Sources */,
