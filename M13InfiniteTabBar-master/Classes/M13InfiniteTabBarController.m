@@ -33,6 +33,7 @@
     NSMutableDictionary *_indiciesRequiringAttention;
     BOOL viewDidLoadOccur;
     NSInteger numberOfItemsForScrolling;
+    bool hello;
 }
 
 - (id)initWithViewControllers:(NSArray *)viewControllers pairedWithInfiniteTabBarItems:(NSArray *)items
@@ -124,7 +125,9 @@
     //All the frames here are temporary. They will be layed out during handleInterfaceChange:
     if (viewDidLoadOccur && _viewControllers.count > 0) {
         self.view.backgroundColor = [UIColor whiteColor];
+        NSLog(@"%f",self.view.frame.size.width);
         
+        NSLog(@"%f",self.view.frame.size.height);
         //create content view to hold view controllers
         _contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 50.0)];
         _contentView.backgroundColor = [UIColor whiteColor];
@@ -175,6 +178,12 @@
             _tabBarBackgroundColor = [UIColor whiteColor];
         }
         _maskView.backgroundColor = _tabBarBackgroundColor;
+        
+        NSLog(@"%f",_contentView.frame.size.width);
+        
+    
+        
+        
         
         [self.view addSubview:_maskView];
         [_maskView addSubview:_infiniteTabBar];
@@ -238,6 +247,34 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+
+- (void)navigationController:(UINavigationController *)navigationController
+      willShowViewController:(UIViewController *)viewController
+                    animated:(BOOL)animated
+{
+    if (viewController.hidesBottomBarWhenPushed) {
+       
+
+        hello=true;
+
+        
+        [self handleInterfaceChange:nil];
+        
+        NSLog(@"NEGE?");
+    } else if ([viewController isKindOfClass:[M13InfiniteTabBarController class]]) {
+        self.infiniteTabBar.hidden = NO;
+        hello=false;
+          [self handleInterfaceChange:nil];
+         NSLog(@"So");
+    }
+    else   {
+        self.infiniteTabBar.hidden = NO;
+        hello=false;
+        [self handleInterfaceChange:nil];
+        NSLog(@"Sol?");
+    }
+}
+
 //Handle rotating all view controllers
 - (void)handleInterfaceChange:(NSNotification *)notification
 {
@@ -272,6 +309,9 @@
         }
         
         //Update frames
+        
+   
+        
         if (go) {
             //Start Animation
             [UIView beginAnimations:@"HandleInterfaceChange" context:nil];
@@ -292,7 +332,9 @@
             if (interfaceOrientation == UIInterfaceOrientationPortrait) {
                 //Code that needs to be separate based on top or bottom
                 if (_tabBarPosition == M13InfiniteTabBarPositionBottom) {
-                    tempFrame = CGRectMake(0, 0, totalSize.width, totalSize.height - 50.0);
+                    if (hello){
+                        tempFrame = CGRectMake(0, 0, totalSize.width, totalSize.height+10);}
+                    else tempFrame = CGRectMake(0, 0, totalSize.width, totalSize.height - 50.0);
                     _maskView.frame = CGRectMake(0, totalSize.height - 50.0 - triangleDepth, _maskView.frame.size.width, _maskView.frame.size.height);
                 } else {
                     tempFrame = CGRectMake(0, 65, totalSize.width, totalSize.height - 65.0);
@@ -389,6 +431,21 @@
                 CGPathAddLineToPoint(path, NULL, (tempFrame.size.width / 2.0), tempFrame.size.height - triangleDepth);
                 CGPathAddLineToPoint(path, NULL, (tempFrame.size.width / 2.0) - triangleDepth, tempFrame.size.height);
             }
+            
+            
+            
+            if (hello){
+                CGRect tempFrame;
+                CGSize totalSize = [UIScreen mainScreen].bounds.size;
+                tempFrame = CGRectMake(0, 0, totalSize.width, totalSize.height );
+                _contentView.frame = tempFrame;
+                _selectedViewController.view.frame = CGRectMake(0, 0, tempFrame.size.width, tempFrame.size.height);
+                _infiniteTabBar.frame = CGRectMake(0, 0, _infiniteTabBar.frame.size.width, _infiniteTabBar.frame.size.height);
+                NSLog(@"Hello");
+            }
+            
+            
+            
             CGPathAddLineToPoint(path, NULL, 0, tempFrame.size.height); //Bottom LEft
             CGPathCloseSubpath(path); //Close
             [maskLayer setPath:path];

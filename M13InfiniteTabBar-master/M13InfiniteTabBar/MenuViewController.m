@@ -102,7 +102,9 @@
         display = @"GreaterThan5Tabs";
         M13InfiniteTabBarController *vc = segue.destinationViewController;
         vc.delegate = self;
+        
         //Set the requires user attention background
+     
         vc.requiresAttentionBackgroundView = [[PulsingRequiresAttentionView alloc] init];
         //A view controller requires user attention
         [vc viewControllerAtIndex:6 requiresUserAttentionWithImportanceLevel:1];
@@ -121,6 +123,7 @@
         vc.tabBarPosition = M13InfiniteTabBarPositionTop;
         vc.delegate = self;
         //Set the requires user attention background
+
         vc.requiresAttentionBackgroundView = [[PulsingRequiresAttentionView alloc] init];
         //A view controller requires user attention
         [vc viewControllerAtIndex:6 requiresUserAttentionWithImportanceLevel:1];
@@ -137,13 +140,18 @@
     ViewController *vc1 = [storyboard instantiateViewControllerWithIdentifier:@"BookmarksVC"];
     
     RecentView *vcc = [[RecentView alloc] init];
-    NavigationController *nav1=[[NavigationController alloc]initWithRootViewController:vcc];
+    UINavigationController *nav1=[[UINavigationController alloc]initWithRootViewController:vcc];
+    nav1.delegate=tabBarController;
+    
     GroupsView *groupView=[[GroupsView alloc]init];
-    NavigationController *nav2=[[NavigationController alloc]initWithRootViewController:groupView];
+    UINavigationController *nav2=[[UINavigationController alloc]initWithRootViewController:groupView];
+     nav2.delegate=tabBarController;
     PeopleView *peopleView=[[PeopleView alloc]init];
-    NavigationController *nav3=[[NavigationController alloc]initWithRootViewController:peopleView];
+    UINavigationController *nav3=[[UINavigationController alloc]initWithRootViewController:peopleView];
+     nav3.delegate=tabBarController;
     SettingsView *settingsView=[[SettingsView alloc]init];
-    NavigationController *nav4=[[NavigationController alloc] initWithRootViewController:settingsView];
+    UINavigationController *nav4=[[UINavigationController alloc] initWithRootViewController:settingsView];
+     nav4.delegate=tabBarController;
     ViewController *vc2 = [storyboard instantiateViewControllerWithIdentifier:@"SearchVC"];
     ViewController *vc3 = [storyboard instantiateViewControllerWithIdentifier:@"WorldVC"];
     ViewController *vc4 = [storyboard instantiateViewControllerWithIdentifier:@"StopwatchVC"];
@@ -170,6 +178,7 @@
 //    [vc1.view addSubview:button1];
 //    
     vc1.infiniteTabBarController = tabBarController;
+    vcc.infiniteTabBarController=tabBarController;
     
  
     
@@ -213,6 +222,7 @@
 - (void)infiniteTabBarController:(M13InfiniteTabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
 {
     //Do nothing
+    
 }
 
 @end

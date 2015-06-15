@@ -100,6 +100,7 @@
 	CreateRecentItem([PFUser currentUser], groupId, group[PF_GROUP_MEMBERS], group[PF_GROUP_NAME]);
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	ChatView *chatView = [[ChatView alloc] initWith:groupId];
+    chatView.hidesBottomBarWhenPushed=YES;
 	[self.navigationController pushViewController:chatView animated:YES];
 }
 

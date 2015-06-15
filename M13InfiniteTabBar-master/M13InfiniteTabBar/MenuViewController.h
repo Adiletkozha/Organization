@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "M13InfiniteTabBarController.h"
 
-@interface MenuViewController : UITableViewController <M13InfiniteTabBarControllerDelegate>
+@interface MenuViewController : UITableViewController <M13InfiniteTabBarControllerDelegate,UINavigationControllerDelegate>
 
 @end

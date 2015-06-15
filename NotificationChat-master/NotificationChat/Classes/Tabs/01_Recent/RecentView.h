@@ -16,12 +16,16 @@
 #import "AddressBookView.h"
 #import "FacebookFriendsView.h"
 #import "M13InfiniteTabBarController.h"
+#import "ChatView.h"
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
-@interface RecentView : UITableViewController <UIActionSheetDelegate, SelectSingleDelegate, SelectMultipleDelegate, AddressBookDelegate, FacebookFriendsDelegate>
+@class M13InfiniteTabBarController;
+
+@interface RecentView : UITableViewController <UIActionSheetDelegate, SelectSingleDelegate, SelectMultipleDelegate, AddressBookDelegate, FacebookFriendsDelegate,UINavigationControllerDelegate>
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *rightbar;
 @property (nonatomic, strong) M13InfiniteTabBarController *infiniteTabBarController;
+@property (nonatomic,strong) ChatView *ch1;
 - (void)loadRecents;
 
 @end

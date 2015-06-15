@@ -25,6 +25,8 @@ typedef enum {
 } M13InfiniteTabBarPosition;
 
 /** Delegate to respond to changes occuring in `M13InfiniteTabBarController` */
+
+
 @protocol M13InfiniteTabBarControllerDelegate <NSObject>
 
 /**Asks the delegate for the list of view controllers that will be represented in the tab bar controller. This is for a storyboard implementation of M13InfiniteTabBarController;
@@ -47,7 +49,10 @@ typedef enum {
 @end
 
 /** A controller for `M13InfiniteTabBar`. Preforms similar to `UITabBarController`.*/
-@interface M13InfiniteTabBarController : UIViewController <M13InfiniteTabBarDelegate>
+@interface M13InfiniteTabBarController : UIViewController <M13InfiniteTabBarDelegate,UINavigationControllerDelegate>
+
+
+
 /** @name Initalization */
 /** Initalize an instance of `M13InfiniteTabBarController` with a set of `UIViewController`s paired with a set of `M13InfiniteTabBarItem`s..
  @note On the iPhone, the third item in the tab bar is selected initally. On the iPad the fifth item is selected initally.

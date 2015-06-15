@@ -58,6 +58,7 @@
 {
 	self = [super init];
 	groupId = groupId_;
+
 	return self;
 }
 
@@ -65,8 +66,12 @@
 - (void)viewDidLoad
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
+  
+
 	[super viewDidLoad];
 	self.title = @"Chat";
+//self.infiniteTabBarController=YES;
+    
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	users = [[NSMutableArray alloc] init];
 	messages = [[NSMutableArray alloc] init];
@@ -93,8 +98,11 @@
 {
     NSLog(@"View did appear");
 	[super viewDidAppear:animated];
+     
 	self.collectionView.collectionViewLayout.springinessEnabled = YES;
 	timer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(loadMessages) userInfo:nil repeats:YES];
+    
+  
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------

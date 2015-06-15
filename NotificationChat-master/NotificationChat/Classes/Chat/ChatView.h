@@ -13,11 +13,14 @@
 
 #import "JSQMessages.h"
 #import "RNGridMenu.h"
+#import "M13InfiniteTabBarController.h"
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
+@class M13InfiniteTabBarController;
 @interface ChatView : JSQMessagesViewController <UIActionSheetDelegate, UIImagePickerControllerDelegate, RNGridMenuDelegate>
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 
+@property (nonatomic, strong) M13InfiniteTabBarController *infiniteTabBarController;
 - (id)initWith:(NSString *)groupId_;
 
 @end

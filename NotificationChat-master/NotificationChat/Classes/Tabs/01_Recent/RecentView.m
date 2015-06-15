@@ -18,7 +18,7 @@
 
 #import "RecentView.h"
 #import "RecentCell.h"
-#import "ChatView.h"
+
 #import "SelectSingleView.h"
 #import "SelectMultipleView.h"
 #import "AddressBookView.h"
@@ -128,10 +128,18 @@
 - (void)actionChat:(NSString *)groupId
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
-	ChatView *chatView = [[ChatView alloc] initWith:groupId];
-	chatView.hidesBottomBarWhenPushed = YES;
     
+	ChatView *chatView = [[ChatView alloc] initWith:groupId];
+  //  chatView.infiniteTabBarController=self.infiniteTabBarController;
+//[chatView.infiniteTabBarController.infiniteTabBar removeFromSuperview];
+ 
+    chatView.hidesBottomBarWhenPushed=YES;
+    
+
 	[self.navigationController pushViewController:chatView animated:YES];
+  
+
+    
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------

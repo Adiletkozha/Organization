@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>81854552-E0D9-4240-9F6C-8BDA720873E2</string>
 	<key>IDESourceControlProjectName</key>
-	<string>app</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>1C0EF019CC120A5304A78DABE9EBB092306C7F49</key>
 		<string>https://github.com/Adiletkozha/Organization.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>NotificationChat-master/NotificationChat/app.xcodeproj</string>
+	<string>NotificationChat-master/NotificationChat/app.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>1C0EF019CC120A5304A78DABE9EBB092306C7F49</key>

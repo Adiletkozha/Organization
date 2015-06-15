@@ -163,7 +163,7 @@
 - (IBAction)actionPhoto:(id)sender
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
-	PresentPhotoLibrary(self.view, YES);
+	PresentPhotoLibrary(self, YES);
 }
 
 #pragma mark - UIImagePickerControllerDelegate

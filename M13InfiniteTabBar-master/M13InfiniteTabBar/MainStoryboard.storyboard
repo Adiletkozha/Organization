@@ -114,22 +114,6 @@
             </objects>
             <point key="canvasLocation" x="-121" y="540"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="LYm-xU-98M">
-            <objects>
-                <navigationController id="tyE-Nk-0Oh" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sfY-QF-R2g">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="3Oq-C2-Ggf" kind="relationship" relationship="rootViewController" id="KPB-Mn-bs8"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NpP-pd-Upp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="387" y="553"/>
-        </scene>
         <!--Search-->
         <scene sceneID="AtM-hF-82s">
             <objects>
@@ -254,7 +238,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="9CC04675-6E1E-4C77-9C71-5B2FD683C243" translatesAutoresizingMaskIntoConstraints="NO" id="xfB-Mm-ggC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="25667977-D9E0-40FF-B18C-81352569460A" translatesAutoresizingMaskIntoConstraints="NO" id="xfB-Mm-ggC">
                                 <rect key="frame" x="20" y="20" width="280" height="528"/>
                             </imageView>
                         </subviews>
@@ -304,7 +288,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="9CC04675-6E1E-4C77-9C71-5B2FD683C243" width="250" height="250">
+        <image name="25667977-D9E0-40FF-B18C-81352569460A" width="250" height="250">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -4532,6 +4516,6 @@ AAAAAAAAQgAAAAAAAAAAAAAAAAAD2tM
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="zx9-br-y4E"/>
+        <segue reference="4Vp-lm-eN1"/>
     </inferredMetricsTieBreakers>
 </document>
