@@ -164,10 +164,10 @@
      nav4.delegate=tabBarController;
     TasksView *tasksView=[[TasksView alloc]init];
     UINavigationController *nav5=[[UINavigationController alloc]initWithRootViewController:tasksView];
-    //nav5.delegate=tabBarController;
+    nav5.delegate=tabBarController;
     MeetingsTableViewController *meetingsView=[[MeetingsTableViewController alloc]init];
     UINavigationController *nav6=[[UINavigationController alloc]initWithRootViewController:meetingsView];
-    
+      nav5.delegate=tabBarController;
 
     //------- setSelectedIndex: test --------
 //    

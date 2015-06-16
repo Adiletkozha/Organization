@@ -67,10 +67,11 @@
 
 - (void)actionChat
 {
-	NSString *groupId = group.objectId;
-	CreateRecentItem([PFUser currentUser], groupId, group[PF_MEETINGS_WORKERS], group[PF_MEETINGS_MSG_MEETING]);
-	ChatView *chatView = [[ChatView alloc] initWith:groupId];
-	[self.navigationController pushViewController:chatView animated:YES];
+//	NSString *groupId = group.objectId;
+//	CreateRecentItem([PFUser currentUser], groupId, group[PF_MEETINGS_WORKERS], group[PF_MEETINGS_MSG_MEETING]);
+//	ChatView *chatView = [[ChatView alloc] initWith:groupId];
+//	[self.navigationController pushViewController:chatView animated:YES];
+
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

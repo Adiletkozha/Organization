@@ -8,6 +8,7 @@
 
 #import "TaskSettingsView.h"
 #import "ChatView.h"
+#import "AboutTaskViewController.h"
 
 @interface TaskSettingsView()
 {
@@ -69,12 +70,20 @@
 
 - (void)actionChat
 {
-	NSString *groupId = group.objectId;
+//	NSString *groupId = group.objectId;
+//
+//    CreateRecentItem([PFUser currentUser], groupId, group[PF_TASK_WORKERS], group[PF_TASK_NAME]);
+//	
+//    ChatView *chatView = [[ChatView alloc] initWith:groupId];
+//	[self.navigationController pushViewController:chatView animated:YES];
 
-    CreateRecentItem([PFUser currentUser], groupId, group[PF_TASK_WORKERS], group[PF_TASK_NAME]);
-	
-    ChatView *chatView = [[ChatView alloc] initWith:groupId];
-	[self.navigationController pushViewController:chatView animated:YES];
+    
+    
+    NSString * storyboardName = @"MainStoryboard";
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
+    UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"aboutview"];
+    vc.hidesBottomBarWhenPushed=YES;
+    [self.navigationController pushViewController:vc animated:YES ];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

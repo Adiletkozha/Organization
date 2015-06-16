@@ -175,6 +175,7 @@
 		2E2A8C281B2EE9EF0043E1CD /* MeetingsSettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E2A8C1B1B2EE9EF0043E1CD /* MeetingsSettingsView.xib */; };
 		2E2A8C291B2EE9EF0043E1CD /* MeetingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A8C1D1B2EE9EF0043E1CD /* MeetingsTableViewController.m */; };
 		2E2A8C2A1B2EE9EF0043E1CD /* MeetingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E2A8C1E1B2EE9EF0043E1CD /* MeetingsView.xib */; };
+		2E2A8C2E1B2FEE750043E1CD /* AboutTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A8C2C1B2FEE750043E1CD /* AboutTaskViewController.m */; };
 		2EFF7B601B26F1F50071399E /* M13InfiniteTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF7B521B26F1F50071399E /* M13InfiniteTabBar.m */; };
 		2EFF7B611B26F1F50071399E /* M13InfiniteTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF7B541B26F1F50071399E /* M13InfiniteTabBarController.m */; };
 		2EFF7B621B26F1F50071399E /* M13InfiniteTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF7B561B26F1F50071399E /* M13InfiniteTabBarItem.m */; };
@@ -522,6 +523,8 @@
 		2E2A8C1C1B2EE9EF0043E1CD /* MeetingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetingsTableViewController.h; sourceTree = "<group>"; };
 		2E2A8C1D1B2EE9EF0043E1CD /* MeetingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetingsTableViewController.m; sourceTree = "<group>"; };
 		2E2A8C1E1B2EE9EF0043E1CD /* MeetingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeetingsView.xib; sourceTree = "<group>"; };
+		2E2A8C2B1B2FEE750043E1CD /* AboutTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutTaskViewController.h; path = ../06_Meetings/AboutTaskViewController.h; sourceTree = "<group>"; };
+		2E2A8C2C1B2FEE750043E1CD /* AboutTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutTaskViewController.m; path = ../06_Meetings/AboutTaskViewController.m; sourceTree = "<group>"; };
 		2EFF7B511B26F1F50071399E /* M13InfiniteTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M13InfiniteTabBar.h; sourceTree = "<group>"; };
 		2EFF7B521B26F1F50071399E /* M13InfiniteTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M13InfiniteTabBar.m; sourceTree = "<group>"; };
 		2EFF7B531B26F1F50071399E /* M13InfiniteTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M13InfiniteTabBarController.h; sourceTree = "<group>"; };
@@ -1341,6 +1344,8 @@
 				2E2A8C0F1B2EE9EF0043E1CD /* TaskSettingsView.h */,
 				2E2A8C101B2EE9EF0043E1CD /* TaskSettingsView.m */,
 				2E2A8C111B2EE9EF0043E1CD /* TaskSettingsView.xib */,
+				2E2A8C2B1B2FEE750043E1CD /* AboutTaskViewController.h */,
+				2E2A8C2C1B2FEE750043E1CD /* AboutTaskViewController.m */,
 				2E2A8C121B2EE9EF0043E1CD /* TasksView.h */,
 				2E2A8C131B2EE9EF0043E1CD /* TasksView.m */,
 				2E2A8C141B2EE9EF0043E1CD /* TasksView.xib */,
@@ -1674,6 +1679,7 @@
 				291A2C671B08EEC100E0E68C /* ChatView.m in Sources */,
 				2E2A8C231B2EE9EF0043E1CD /* TasksView.m in Sources */,
 				291A2B8C1B08ED2E00E0E68C /* AFURLRequestSerialization.m in Sources */,
+				2E2A8C2E1B2FEE750043E1CD /* AboutTaskViewController.m in Sources */,
 				291A2C8A1B08EEC100E0E68C /* PFUser+Util.m in Sources */,
 				291A2C781B08EEC100E0E68C /* BlockedView.m in Sources */,
 				291A2C8E1B08EEC100E0E68C /* common.m in Sources */,
