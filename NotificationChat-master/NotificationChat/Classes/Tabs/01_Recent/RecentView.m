@@ -74,14 +74,22 @@
 - (void)viewDidAppear:(BOOL)animated
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
+
+    
 	[super viewDidAppear:animated];
+
+
 	//---------------------------------------------------------------------------------------------------------------------------------------------
-    self.navigationController.infiniteTabBarItem.badgeText=@"4";
-    //[[self.navigationController infiniteTabBarItem] setBadge];
+
+    
+    
+    
+   // [self.navigationController.infiniteTabBarController.infiniteTabBar badged];
+   // [[self.navigationController infiniteTabBarItem] setBadge];
    // self.navigationController.infiniteTabBarItem.badge5.hidden=NO;
     ;
-    [self.infiniteTabBarController.infiniteTabBarItem setBadgeText:@"d"];
-    [[[self.infiniteTabBarController.tabBarItems objectAtIndex:0] badge5] setHidden:NO];
+   // [self.infiniteTabBarController.infiniteTabBarItem setBadgeText:@"d"];
+  //  [[[self.infiniteTabBarController.tabBarItems objectAtIndex:0] badge5] setHidden:NO];
     
     
   // unloads the view
@@ -113,6 +121,8 @@
 			[recents addObjectsFromArray:objects];
 			[self.tableView reloadData];
 			[self updateTabCounter];
+            
+
 		}
 		else [ProgressHUD showError:@"Network error."];
 		[self.refreshControl endRefreshing];
@@ -125,6 +135,7 @@
 - (void)updateTabCounter
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
+   
 	int total = 0;
 	for (PFObject *recent in recents)
 	{
@@ -132,6 +143,9 @@
 	}
 	UITabBarItem *item = self.tabBarController.tabBar.items[0];
 	item.badgeValue = (total == 0) ? nil : [NSString stringWithFormat:@"%d", total];
+    NSString* totstr = [NSString stringWithFormat:@"%i", total];
+    if(total!=0){
+        [self.navigationController.infiniteTabBarController.infiniteTabBar badged:totstr];}
 }
 
 #pragma mark - User actions

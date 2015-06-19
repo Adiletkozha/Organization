@@ -48,6 +48,9 @@
 	{
 		[self.tabBarItem setImage:[UIImage imageNamed:@"tab_people"]];
 		self.tabBarItem.title = @"People";
+        
+ 
+        
 		//-----------------------------------------------------------------------------------------------------------------------------------------
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(actionCleanup) name:NOTIFICATION_USER_LOGGED_OUT object:nil];
 	}
@@ -68,6 +71,15 @@
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	users = [[NSMutableArray alloc] init];
 	userIds = [[NSMutableArray alloc] init];
+    
+    
+   
+  
+
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
@@ -76,6 +88,13 @@
 {
 	[super viewDidAppear:animated];
 	//---------------------------------------------------------------------------------------------------------------------------------------------
+    
+  
+ 
+    
+    
+    
+    
 	if ([PFUser currentUser] != nil)
 	{
 		if (skipLoading) skipLoading = NO; else [self loadPeople];
@@ -86,9 +105,15 @@
 #pragma mark - User actions
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
+
+-(void)viewdidDisappear:(BOOL)animated{
+     [self.navigationController.infiniteTabBarController.infiniteTabBar badged:@"3"];
+}
+
 - (void)loadPeople
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
+       [self.navigationController.infiniteTabBarController.infiniteTabBar badged:@"2"];
 	PFQuery *query = [PFQuery queryWithClassName:PF_PEOPLE_CLASS_NAME];
 	[query whereKey:PF_PEOPLE_USER1 equalTo:[PFUser currentUser]];
 	[query includeKey:PF_PEOPLE_USER2];

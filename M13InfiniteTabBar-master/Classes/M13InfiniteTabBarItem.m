@@ -67,30 +67,82 @@
         [_containerView addSubview:_titleLabel];
         
         [self addSubview:_containerView];
-      // [self setBadge];
+       //[self setBadge];
         
-        _badge5 = [CustomBadge customBadgeWithString:@"10"];
-        CGPoint point = CGPointMake(self.frame.size.width/2-self.frame.size.width/2, 0);
-        CGSize size = CGSizeMake(self.badge5.frame.size.width-10, self.badge5.frame.size.height-10);
-        CGRect rect = CGRectMake(point.x, point.y, size.width, size.height);
-        [_badge5 setFrame:rect];
-        [self addSubview:_badge5];
-        _badge5.hidden=YES;
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self setNeedsDisplay];
-        });
+
         
     }
     return self;
 }
 
-- (void)setBadge{
-
-
- //
+- (void)setBadge:(NSString *)val{
+    NSLog(@"%@",val);
+    _badge5 = [CustomBadge customBadgeWithString:val];
+    CGPoint point = CGPointMake(self.frame.size.width/2-self.frame.size.width/2, 0);
+    CGSize size = CGSizeMake(self.badge5.frame.size.width-5, self.badge5.frame.size.height-5);
+    CGRect rect = CGRectMake(point.x, point.y, size.width, size.height);
+    [_badge5 setFrame:rect];
+    [self addSubview:_badge5];
+   
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self setNeedsDisplay];
+    });
     
-    NSLog(@"Badge");
+   
+  //  [self handleInterfaceChange:nil];
 }
+
+
+
+
+//-------------------------------------------------------------------
+
+
+- (void)handleInterfaceChange:(NSNotification *)notification
+{
+    //If notification is nil, we manually called for a redraw
+
+        //Update frames
+    bool go=YES;
+    
+        
+        if (go) {
+            //Start Animation
+            [UIView beginAnimations:@"HandleInterfaceChange" context:nil];
+            [UIView setAnimationDuration:0.5];
+            [UIView setAnimationDelegate:self.superview];
+            
+            CGPoint point = CGPointMake(self.frame.size.width/2-self.frame.size.width/2, 0);
+            CGSize size = CGSizeMake(self.badge5.frame.size.width-10, self.badge5.frame.size.height-10);
+            CGRect rect = CGRectMake(point.x, point.y, size.width, size.height);
+            [_badge5 setFrame:rect];
+             NSLog(@"Badge");
+     
+         
+            
+       
+            
+            //Complete animations
+            [UIView commitAnimations];
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------------------------------------------------
 
 - (void)layoutSubviews
 {

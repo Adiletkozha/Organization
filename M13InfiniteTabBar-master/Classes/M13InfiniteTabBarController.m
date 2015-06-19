@@ -264,6 +264,7 @@
     } else if ([viewController isKindOfClass:[M13InfiniteTabBarController class]]) {
         self.infiniteTabBar.hidden = NO;
         hello=false;
+        
           [self handleInterfaceChange:nil];
          NSLog(@"So");
     }
@@ -340,7 +341,7 @@
                     tempFrame = CGRectMake(0, 65, totalSize.width, totalSize.height - 65.0);
                     _maskView.frame = CGRectMake(0, 5, _maskView.frame.size.width, _maskView.frame.size.height);
                 }
-                
+             
                 _contentView.frame = tempFrame;
                 _selectedViewController.view.frame = CGRectMake(0, 0, tempFrame.size.width, tempFrame.size.height);
                 _infiniteTabBar.frame = CGRectMake(0, 0, _infiniteTabBar.frame.size.width, _infiniteTabBar.frame.size.height);
@@ -441,7 +442,7 @@
                 _contentView.frame = tempFrame;
                 _selectedViewController.view.frame = CGRectMake(0, 0, tempFrame.size.width, tempFrame.size.height);
                 _infiniteTabBar.frame = CGRectMake(0, 0, _infiniteTabBar.frame.size.width, _infiniteTabBar.frame.size.height);
-                NSLog(@"Hello");
+               // NSLog(@"Hello");
             }
             
             

@@ -86,4 +86,6 @@
  */
 @property (nonatomic, assign) BOOL enableInfiniteScrolling;
 
+-(void) badged:(NSString *)val;
+
 @end

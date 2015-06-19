@@ -150,6 +150,7 @@
         for (M13InfiniteTabBarItem *item in _visibleIcons) {
             item.frame = CGRectMake(origin, 0, itemWidth, item.frame.size.height);
             origin += itemWidth;
+         
             [_tabContainerView addSubview:item];
         }
     } else {
@@ -558,8 +559,16 @@
 - (void)didSelectItem
 {
     if ([_tabBarDelegate respondsToSelector:@selector(infiniteTabBar:didSelectItem:)]) {
+        
         [_tabBarDelegate infiniteTabBar:self didSelectItem:_selectedItem];
+       
     }
 }
+
+- (void)badged:(NSString *)val
+{
+    [_selectedItem setBadge:val];
+}
+
 
 @end

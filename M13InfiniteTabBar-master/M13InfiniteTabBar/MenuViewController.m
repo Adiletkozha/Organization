@@ -194,7 +194,7 @@
     //------- end test ----------------------
     
     //You probably want to set this on the UIViewController initalization, from within the UIViewController subclass. I'm just doing it here since each tab inherits from the same subclass.
-  
+
       [nav1 setInfiniteTabBarItem:[[M13InfiniteTabBarItem alloc] initWithTitle:@"Недавние" selectedIconMask:[UIImage imageNamed:@"tab1Solid.png"] unselectedIconMask:[UIImage imageNamed:@"tab1Line.png"]]];
       [nav2 setInfiniteTabBarItem:[[M13InfiniteTabBarItem alloc] initWithTitle:@"Группы" selectedIconMask:[UIImage imageNamed:@"tab2Solid.png"] unselectedIconMask:[UIImage imageNamed:@"tab2Line.png"]]];
       [nav3 setInfiniteTabBarItem:[[M13InfiniteTabBarItem alloc] initWithTitle:@"Сотрудники" selectedIconMask:[UIImage imageNamed:@"tab3Solid.png"] unselectedIconMask:[UIImage imageNamed:@"tab3Line.png"]]];
@@ -206,6 +206,8 @@
     
       [nav6 setInfiniteTabBarItem:[[M13InfiniteTabBarItem alloc] initWithTitle:@"Собрания" selectedIconMask:[UIImage imageNamed:@"tab6Solid.png"] unselectedIconMask:[UIImage imageNamed:@"tab6Line.png"]]];
     
+    
+   
 
     
     

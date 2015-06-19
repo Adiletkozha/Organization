@@ -54,6 +54,7 @@
 @property (nonatomic, retain) UIColor *attentionTitleColor UI_APPEARANCE_SELECTOR;
  @property (nonatomic, copy) CustomBadge *badge5;
  @property (nonatomic, retain) NSString *badgeText;
+- (void)handleInterfaceChange:(NSNotification *)notification;
 /** @name Other */
 /** Used to set wether the item is selected or not. 
  @warning This should only be used by `M13InfiniteTabBar`, using this method will result in unexpected behavior. If you want to select a tab, go through `M13InfinteTabBar`.
@@ -69,5 +70,5 @@
  @warning This should only be used by `M13InfiniteTabBar`, using this method will result in unexpected behavior. If you want a tab to ask for user attention, go through `M13InfinteTabBar`.
  @param requiresAttention    Wether or not the tab should display that it requires user attention.*/
 - (void)setRequiresUserAttention:(BOOL)requiresAttention;
-- (void)setBadge;
+- (void)setBadge:(NSString *)val;
 @end
