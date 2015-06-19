@@ -176,6 +176,8 @@
 		2E2A8C291B2EE9EF0043E1CD /* MeetingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A8C1D1B2EE9EF0043E1CD /* MeetingsTableViewController.m */; };
 		2E2A8C2A1B2EE9EF0043E1CD /* MeetingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E2A8C1E1B2EE9EF0043E1CD /* MeetingsView.xib */; };
 		2E2A8C2E1B2FEE750043E1CD /* AboutTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A8C2C1B2FEE750043E1CD /* AboutTaskViewController.m */; };
+		2E2A8C3B1B3290460043E1CD /* BadgeStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A8C381B3290460043E1CD /* BadgeStyle.m */; };
+		2E2A8C3C1B3290460043E1CD /* CustomBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A8C3A1B3290460043E1CD /* CustomBadge.m */; };
 		2EFF7B601B26F1F50071399E /* M13InfiniteTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF7B521B26F1F50071399E /* M13InfiniteTabBar.m */; };
 		2EFF7B611B26F1F50071399E /* M13InfiniteTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF7B541B26F1F50071399E /* M13InfiniteTabBarController.m */; };
 		2EFF7B621B26F1F50071399E /* M13InfiniteTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF7B561B26F1F50071399E /* M13InfiniteTabBarItem.m */; };
@@ -525,6 +527,10 @@
 		2E2A8C1E1B2EE9EF0043E1CD /* MeetingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeetingsView.xib; sourceTree = "<group>"; };
 		2E2A8C2B1B2FEE750043E1CD /* AboutTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutTaskViewController.h; path = ../06_Meetings/AboutTaskViewController.h; sourceTree = "<group>"; };
 		2E2A8C2C1B2FEE750043E1CD /* AboutTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutTaskViewController.m; path = ../06_Meetings/AboutTaskViewController.m; sourceTree = "<group>"; };
+		2E2A8C371B3290460043E1CD /* BadgeStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgeStyle.h; sourceTree = "<group>"; };
+		2E2A8C381B3290460043E1CD /* BadgeStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgeStyle.m; sourceTree = "<group>"; };
+		2E2A8C391B3290460043E1CD /* CustomBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomBadge.h; sourceTree = "<group>"; };
+		2E2A8C3A1B3290460043E1CD /* CustomBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomBadge.m; sourceTree = "<group>"; };
 		2EFF7B511B26F1F50071399E /* M13InfiniteTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M13InfiniteTabBar.h; sourceTree = "<group>"; };
 		2EFF7B521B26F1F50071399E /* M13InfiniteTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M13InfiniteTabBar.m; sourceTree = "<group>"; };
 		2EFF7B531B26F1F50071399E /* M13InfiniteTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M13InfiniteTabBarController.h; sourceTree = "<group>"; };
@@ -992,6 +998,7 @@
 				291A2C081B08EEC100E0E68C /* Tabs */,
 				291A2C301B08EEC100E0E68C /* Users */,
 				291A2C411B08EEC100E0E68C /* Utilities */,
+				2E2A8C361B3290460043E1CD /* Badge */,
 				291A2C5A1B08EEC100E0E68C /* Welcome */,
 			);
 			path = Classes;
@@ -1369,6 +1376,18 @@
 			path = 06_Meetings;
 			sourceTree = "<group>";
 		};
+		2E2A8C361B3290460043E1CD /* Badge */ = {
+			isa = PBXGroup;
+			children = (
+				2E2A8C371B3290460043E1CD /* BadgeStyle.h */,
+				2E2A8C381B3290460043E1CD /* BadgeStyle.m */,
+				2E2A8C391B3290460043E1CD /* CustomBadge.h */,
+				2E2A8C3A1B3290460043E1CD /* CustomBadge.m */,
+			);
+			name = Badge;
+			path = Classes/Badge;
+			sourceTree = SOURCE_ROOT;
+		};
 		2EFF7B501B26F1F50071399E /* Classes2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1666,6 +1685,7 @@
 				291A2BA11B08ED2E00E0E68C /* UIDevice+JSQMessages.m in Sources */,
 				291A2B8F1B08ED2E00E0E68C /* AFNetworkActivityIndicatorManager.m in Sources */,
 				291A2C721B08EEC100E0E68C /* GroupSettingsView.m in Sources */,
+				2E2A8C3C1B3290460043E1CD /* CustomBadge.m in Sources */,
 				291A2BBE1B08ED2E00E0E68C /* JSQMessagesInputToolbar.m in Sources */,
 				291A2BC81B08ED2E00E0E68C /* JSQSystemSoundPlayer.m in Sources */,
 				291A2B8E1B08ED2E00E0E68C /* AFURLSessionManager.m in Sources */,
@@ -1743,6 +1763,7 @@
 				291A2C881B08EEC100E0E68C /* group.m in Sources */,
 				291A2BA31B08ED2E00E0E68C /* UIView+JSQMessages.m in Sources */,
 				2EFF7B661B26F1F50071399E /* UIViewController+M13InfiniteTabBarExtension.m in Sources */,
+				2E2A8C3B1B3290460043E1CD /* BadgeStyle.m in Sources */,
 				29EB240B19E9292500D7AA97 /* main.m in Sources */,
 				291A2C651B08EEC100E0E68C /* ProfileView.m in Sources */,
 				2E2A8C251B2EE9EF0043E1CD /* CreateMeetingsView.m in Sources */,

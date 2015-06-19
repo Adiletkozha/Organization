@@ -187,7 +187,7 @@
 //    
   
     vcc.infiniteTabBarController=tabBarController;
-    
+    meetingsView.infiniteTabBarController=tabBarController;
  
     
     
@@ -198,6 +198,8 @@
       [nav1 setInfiniteTabBarItem:[[M13InfiniteTabBarItem alloc] initWithTitle:@"Недавние" selectedIconMask:[UIImage imageNamed:@"tab1Solid.png"] unselectedIconMask:[UIImage imageNamed:@"tab1Line.png"]]];
       [nav2 setInfiniteTabBarItem:[[M13InfiniteTabBarItem alloc] initWithTitle:@"Группы" selectedIconMask:[UIImage imageNamed:@"tab2Solid.png"] unselectedIconMask:[UIImage imageNamed:@"tab2Line.png"]]];
       [nav3 setInfiniteTabBarItem:[[M13InfiniteTabBarItem alloc] initWithTitle:@"Сотрудники" selectedIconMask:[UIImage imageNamed:@"tab3Solid.png"] unselectedIconMask:[UIImage imageNamed:@"tab3Line.png"]]];
+    
+    
       [nav4 setInfiniteTabBarItem:[[M13InfiniteTabBarItem alloc] initWithTitle:@"Настройки" selectedIconMask:[UIImage imageNamed:@"tab4Solid.png"] unselectedIconMask:[UIImage imageNamed:@"tab3Line.png"]]];
     
       [nav5 setInfiniteTabBarItem:[[M13InfiniteTabBarItem alloc] initWithTitle:@"Задачи" selectedIconMask:[UIImage imageNamed:@"tab5Solid.png"] unselectedIconMask:[UIImage imageNamed:@"tab5Line.png"]]];
@@ -205,6 +207,8 @@
       [nav6 setInfiniteTabBarItem:[[M13InfiniteTabBarItem alloc] initWithTitle:@"Собрания" selectedIconMask:[UIImage imageNamed:@"tab6Solid.png"] unselectedIconMask:[UIImage imageNamed:@"tab6Line.png"]]];
     
 
+    
+    
     //Done
     if ([display isEqualToString:@"LessThan5Tabs"]) {
         return @[nav1, nav2, nav3];

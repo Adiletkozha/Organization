@@ -8,8 +8,9 @@
 
 #import "AboutTaskViewController.h"
 
-@interface AboutTaskViewController ()
+@interface AboutTaskViewController (){
 
+}
 @end
 
 @implementation AboutTaskViewController
@@ -17,13 +18,35 @@
 
 
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+   // self.taskName.text=taskId;
+  //  NSLog(@"%@",taskId[PF_TASK_NAME]);
+    // Do any additional setup after loading the view from its nib.
+}
+
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:YES];
+    self.taskName.text=self.task[PF_TASK_NAME];
+    self.desctiptionText.text=self.task[PF_TASK_DESCRIPTION];
+   
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    
+    [dateFormatter setDateFormat:@"dd-MM-yyyy HH:mm"];
+    
+    NSString *formatedDate = [dateFormatter stringFromDate:self.task[@"deadline"]];
+    
+    self.deadlineText.text =formatedDate;
+    
+    
     
     
     // Do any additional setup after loading the view from its nib.
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

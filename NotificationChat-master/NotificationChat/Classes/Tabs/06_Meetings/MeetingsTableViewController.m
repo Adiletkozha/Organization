@@ -55,19 +55,17 @@
 {
     [meetings removeAllObjects];
     [self.tableView reloadData];
-//    [self updateTabCounter];
+    [self updateTabCounter];
 }
 
-//- (void)updateTabCounter
-//{
-//    int total = 0;
-//    for (PFObject *recent in meetings)
-//    {
-//        total += [recent[PF_RECENT_COUNTER] intValue];
-//    }
-//    UITabBarItem *item = self.tabBarController.tabBar.items[0];
-//    item.badgeValue = (total == 0) ? nil : [NSString stringWithFormat:@"%d", total];
-//}
+- (void)updateTabCounter
+{
+    int total = 3;
+//     [self.infiniteTabBarController setSelectedIndex:2];
+  //  UITabBarItem *item = self.infiniteTabBarController.tabBar.items[0];
+  //  item.badgeValue = (total == 0) ? nil : [NSString stringWithFormat:@"%d", total];
+    
+}
 
 
 - (void)viewDidAppear:(BOOL)animated

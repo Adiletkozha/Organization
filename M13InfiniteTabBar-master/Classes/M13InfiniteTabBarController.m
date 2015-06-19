@@ -28,7 +28,7 @@
     UIView *_maskView;
     UIView *_contentView;
     NSArray *_viewControllers;
-    NSArray *_tabBarItems;
+  //  NSArray *_tabBarItems;
     CAShapeLayer *borderLayer;
     NSMutableDictionary *_indiciesRequiringAttention;
     BOOL viewDidLoadOccur;

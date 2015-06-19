@@ -79,7 +79,7 @@ typedef enum {
 @property (nonatomic, assign) BOOL enableInfiniteScrolling;
 /**The location that the tab bar is pinned. The bar can be pinned to the top or bottom. Default is the bottom.*/
 @property (nonatomic, assign) M13InfiniteTabBarPosition tabBarPosition;
-
+@property (nonatomic, retain) NSArray *tabBarItems;
 /** @name Selection Handling */
 /** The selected `UIViewController` instance. */
 @property (nonatomic, assign) UIViewController *selectedViewController;

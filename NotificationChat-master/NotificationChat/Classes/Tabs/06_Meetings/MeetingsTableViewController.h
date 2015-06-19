@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+@class M13InfiniteTabBarController;
 
 @interface MeetingsTableViewController : UITableViewController
+@property (nonatomic, strong) M13InfiniteTabBarController *infiniteTabBarController;
 
 @end

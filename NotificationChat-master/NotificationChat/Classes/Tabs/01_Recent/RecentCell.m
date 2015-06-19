@@ -56,6 +56,17 @@
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	NSTimeInterval seconds = [[NSDate date] timeIntervalSinceDate:recent[PF_RECENT_UPDATEDACTION]];
 	labelElapsed.text = TimeElapsed(seconds);
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	int counter = [recent[PF_RECENT_COUNTER] intValue];
 	labelCounter.text = (counter == 0) ? @"" : [NSString stringWithFormat:@"%d new", counter];

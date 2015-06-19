@@ -19,6 +19,7 @@
 @property (strong, nonatomic) IBOutlet UITableViewCell *cellName;
 
 @property (strong, nonatomic) IBOutlet UILabel *labelName;
+@property (strong, nonatomic) IBOutlet UITableViewCell *creatorName;
 
 @end
 
@@ -26,7 +27,7 @@
 
 @synthesize cellName;
 @synthesize labelName;
-
+@synthesize creatorName;
 - (id)initWith:(PFObject *)group_
 {
 	self = [super init];
@@ -68,7 +69,7 @@
 	}];
 }
 
-- (void)actionChat
+- (void)actionChat:(PFObject *)taskID
 {
 //	NSString *groupId = group.objectId;
 //
@@ -81,26 +82,32 @@
     
     NSString * storyboardName = @"MainStoryboard";
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
-    UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"aboutview"];
+    AboutTaskViewController * vc = (AboutTaskViewController *)[storyboard instantiateViewControllerWithIdentifier:@"aboutview"];
+    
+    vc.task=group;
     vc.hidesBottomBarWhenPushed=YES;
+    
     [self.navigationController pushViewController:vc animated:YES ];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-	return 2;
+	return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 	if (section == 0) return 1;
-	if (section == 1) return [users count];
+    if (section == 1) return 1;
+	if (section == 2) return [users count];
 	return 0;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-	if (section == 1) return @"Workers";
+    if (section == 0) return @"Подробнее";
+    if (section == 1) return @"Создатель";
+	if (section == 2) return @"Сотрудники";
 	return nil;
 }
 
@@ -108,13 +115,17 @@
 {
 	if ((indexPath.section == 0) && (indexPath.row == 0)) return cellName;
 
-    if (indexPath.section == 1)
+    if ((indexPath.section == 1) && (indexPath.row == 0)) return creatorName;
+    
+    
+    if (indexPath.section == 2)
 	{
 		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
 		if (cell == nil) cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
 
 		PFUser *user = users[indexPath.row];
 		cell.textLabel.text = user[PF_USER_FULLNAME];
+       // NSLog(@"%@",user[PF_USER_FULLNAME]);
 
 		return cell;
 	}
@@ -125,7 +136,11 @@
 {
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
 
-    if ((indexPath.section == 0) && (indexPath.row == 0)) [self actionChat];
+    if ((indexPath.section == 0) && (indexPath.row == 0)) {
+        NSLog(@"%@",group[PF_TASK_OBJECTID]);
+        [self actionChat:group];
+        
+    }
 }
 
 @end

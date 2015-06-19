@@ -76,6 +76,18 @@
 {
 	[super viewDidAppear:animated];
 	//---------------------------------------------------------------------------------------------------------------------------------------------
+    self.navigationController.infiniteTabBarItem.badgeText=@"4";
+    //[[self.navigationController infiniteTabBarItem] setBadge];
+   // self.navigationController.infiniteTabBarItem.badge5.hidden=NO;
+    ;
+    [self.infiniteTabBarController.infiniteTabBarItem setBadgeText:@"d"];
+    [[[self.infiniteTabBarController.tabBarItems objectAtIndex:0] badge5] setHidden:NO];
+    
+    
+  // unloads the view
+    //[parent addSubview:self.navigationController.infiniteTabBarItem.badge5];
+
+    
 	if ([PFUser currentUser] != nil)
 	{
 		[self loadRecents];

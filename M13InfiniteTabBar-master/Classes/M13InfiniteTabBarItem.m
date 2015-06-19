@@ -26,6 +26,7 @@
     BOOL _selected;
     BOOL _requiresAttention;
     UIImageView *_backgroundImageView;
+    
 }
 
 - (id)initWithTitle:(NSString *)title selectedIconMask:(UIImage *)selectedIconMask unselectedIconMask:(UIImage *)unselectedIconMask
@@ -66,9 +67,29 @@
         [_containerView addSubview:_titleLabel];
         
         [self addSubview:_containerView];
+      // [self setBadge];
+        
+        _badge5 = [CustomBadge customBadgeWithString:@"10"];
+        CGPoint point = CGPointMake(self.frame.size.width/2-self.frame.size.width/2, 0);
+        CGSize size = CGSizeMake(self.badge5.frame.size.width-10, self.badge5.frame.size.height-10);
+        CGRect rect = CGRectMake(point.x, point.y, size.width, size.height);
+        [_badge5 setFrame:rect];
+        [self addSubview:_badge5];
+        _badge5.hidden=YES;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self setNeedsDisplay];
+        });
         
     }
     return self;
+}
+
+- (void)setBadge{
+
+
+ //
+    
+    NSLog(@"Badge");
 }
 
 - (void)layoutSubviews
@@ -81,6 +102,9 @@
         _titleLabel.frame = CGRectMake(2, 37, self.frame.size.width - 4, 10);
     }
 }
+
+
+
 
 - (void)rotateToAngle:(CGFloat)angle
 {

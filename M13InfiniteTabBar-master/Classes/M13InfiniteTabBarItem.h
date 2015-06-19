@@ -13,7 +13,8 @@
  */
 
 #import <UIKit/UIKit.h>
-
+#import "CustomBadge.h"
+#import "BadgeStyle.h"
 /** This class is similar to the `UITabBarItem` class. */
 @interface M13InfiniteTabBarItem : UIView
 
@@ -51,7 +52,8 @@
 @property (nonatomic, retain) UIColor *unselectedTitleColor UI_APPEARANCE_SELECTOR;
 /** The color of the icon text when the tab requires user attention.*/
 @property (nonatomic, retain) UIColor *attentionTitleColor UI_APPEARANCE_SELECTOR;
-
+ @property (nonatomic, copy) CustomBadge *badge5;
+ @property (nonatomic, retain) NSString *badgeText;
 /** @name Other */
 /** Used to set wether the item is selected or not. 
  @warning This should only be used by `M13InfiniteTabBar`, using this method will result in unexpected behavior. If you want to select a tab, go through `M13InfinteTabBar`.
@@ -67,5 +69,5 @@
  @warning This should only be used by `M13InfiniteTabBar`, using this method will result in unexpected behavior. If you want a tab to ask for user attention, go through `M13InfinteTabBar`.
  @param requiresAttention    Wether or not the tab should display that it requires user attention.*/
 - (void)setRequiresUserAttention:(BOOL)requiresAttention;
-
+- (void)setBadge;
 @end
